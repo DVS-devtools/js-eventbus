@@ -1,8 +1,17 @@
-## js-eventbus
+# js-eventbus
 
 Simple library to trigger custom events
 
-### Example
+### Installation
+```bash
+npm install --save @docomodigital/js-eventbus
+```
+Or
+```bash
+yarn add @docomodigital/js-eventbus
+```
+
+### usage
 ```javascript
 import EventBus from '@docomodigital/js-eventbus';
 

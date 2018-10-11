@@ -119,7 +119,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
- * @class EventBus
  * @description Simple library to trigger custom events
  * @example
  * import EventBus from '@docomodigital/js-eventbus';
@@ -141,8 +140,6 @@ function () {
     this.events = {};
   }
   /**
-   * @memberOf EventBus
-   * @function on
    * @description Register a new callback for the specified custom event
    * @param {String} eventType - if not exists it defines a new one
    * @param {Function} func - the function to call when the event is triggered
@@ -180,8 +177,6 @@ function () {
       });
     }
     /**
-     * @memberOf EventBus
-     * @function trigger
      * @description Trigger the specified event, pass the other arguments to the callbacks
      * @param {String} eventType - the eventType to trigger. if not exists nothing happens
      * @param {*} args - Arguments to pass to the eventType callbacks
@@ -212,8 +207,6 @@ function () {
       });
     }
     /**
-     * @memberOf EventBus
-     * @function off
      * @description Remove the specified callback from the specified event
      * @param {String} eventType - the eventType
      * @param {Function} func - the reference of the function to remove from the list of function
@@ -243,8 +236,6 @@ function () {
       }, []);
     }
     /**
-     * @memberOf EventBus
-     * @function clear
      * @description Remove all the callbacks from the specified event
      * if the event not exists nothing happens
      * @param {String} eventType - the event type to clear
@@ -263,8 +254,6 @@ function () {
       this.events[eventType] = [];
     }
     /**
-     * @memberOf EventBus
-     * @function clearAll
      * @description Remove all the callbacks from all the events
      * @return {void}
      * @example
@@ -281,5 +270,6 @@ function () {
   return EventBus;
 }();
 
-exports.default = EventBus;
+var _default = EventBus;
+exports.default = _default;
 },{}]},{},["Focm"], null)

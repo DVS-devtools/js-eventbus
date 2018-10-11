@@ -1,5 +1,4 @@
 /**
- * @class EventBus
  * @description Simple library to trigger custom events
  * @example
  * import EventBus from '@docomodigital/js-eventbus';
@@ -12,14 +11,12 @@
  * Bus.on('customEvent', callback);
  * Bus.trigger('customEvent', {foo: 'bar'}); // callback is called
  */
-export default class EventBus {
+class EventBus {
     constructor() {
         this.events = {};
     }
 
     /**
-     * @memberOf EventBus
-     * @function on
      * @description Register a new callback for the specified custom event
      * @param {String} eventType - if not exists it defines a new one
      * @param {Function} func - the function to call when the event is triggered
@@ -48,8 +45,6 @@ export default class EventBus {
     }
 
     /**
-     * @memberOf EventBus
-     * @function trigger
      * @description Trigger the specified event, pass the other arguments to the callbacks
      * @param {String} eventType - the eventType to trigger. if not exists nothing happens
      * @param {*} args - Arguments to pass to the eventType callbacks
@@ -72,8 +67,6 @@ export default class EventBus {
     }
 
     /**
-     * @memberOf EventBus
-     * @function off
      * @description Remove the specified callback from the specified event
      * @param {String} eventType - the eventType
      * @param {Function} func - the reference of the function to remove from the list of function
@@ -99,8 +92,6 @@ export default class EventBus {
     }
 
     /**
-     * @memberOf EventBus
-     * @function clear
      * @description Remove all the callbacks from the specified event
      * if the event not exists nothing happens
      * @param {String} eventType - the event type to clear
@@ -116,8 +107,6 @@ export default class EventBus {
     }
 
     /**
-     * @memberOf EventBus
-     * @function clearAll
      * @description Remove all the callbacks from all the events
      * @return {void}
      * @example
@@ -127,3 +116,5 @@ export default class EventBus {
         this.events = {};
     }
 }
+
+export default EventBus;
