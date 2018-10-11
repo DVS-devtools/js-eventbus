@@ -1,0 +1,7 @@
+{
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+        "src/**/*.js"
+    ],
+    "coverageReporters": ["lcov", "text", "text-summary"]
+}
