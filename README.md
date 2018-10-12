@@ -1,5 +1,7 @@
 # js-eventbus
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/docomodigital/js-eventbus.svg)](https://greenkeeper.io/)
+
 Simple library to trigger custom events
 
 ## Usage
