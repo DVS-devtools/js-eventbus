@@ -2,6 +2,21 @@
 
 Simple library to trigger custom events
 
+## Usage
+```javascript
+import EventBus from '@docomodigital/js-eventbus';
+
+const Bus = new EventBus();
+
+const callback = (args) => {
+    // Do something...
+};
+
+Bus.on('customEvent', callback);
+
+Bus.trigger('customEvent', {foo: 'bar'}); // callback is called
+```
+
 ## Installation
 
 ### NPM
