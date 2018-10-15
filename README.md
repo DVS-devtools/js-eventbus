@@ -1,5 +1,8 @@
 # js-eventbus
 
+[![Build Status](https://travis-ci.com/docomodigital/js-eventbus.svg?branch=master)](https://travis-ci.com/docomodigital/js-eventbus)
+[![Coverage Status](https://coveralls.io/repos/github/docomodigital/js-eventbus/badge.svg?branch=master)](https://coveralls.io/github/docomodigital/js-eventbus?branch=master)
+[![npm version](https://badge.fury.io/js/%40docomodigital%2Fjs-eventbus.svg)](https://badge.fury.io/js/%40docomodigital%2Fjs-eventbus)
 [![Greenkeeper badge](https://badges.greenkeeper.io/docomodigital/js-eventbus.svg)](https://greenkeeper.io/)
 
 Simple library to trigger custom events
@@ -10,13 +13,13 @@ import EventBus from '@docomodigital/js-eventbus';
 
 const Bus = new EventBus();
 
-const callback = (args) => {
-    // Do something...
+const callback = (options) => {
+    console.log(options.foo);
 };
 
 Bus.on('customEvent', callback);
 
-Bus.trigger('customEvent', {foo: 'bar'}); // callback is called
+Bus.trigger('customEvent', { foo: 'bar' }); // console.log('bar')
 ```
 
 ## Installation
