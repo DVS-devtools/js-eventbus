@@ -1,6 +1,6 @@
 {
   "name": "@docomodigital/js-eventbus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple library to trigger custom events",
   "main": "dist/index.js",
   "license": "MIT",
